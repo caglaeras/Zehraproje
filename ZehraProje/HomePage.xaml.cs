@@ -55,6 +55,8 @@ namespace ZehraProje
         {
             ObservableCollection<MovieOrShow> watchlist = new ObservableCollection<MovieOrShow>();
             WatchlistPage watchlistPage = new WatchlistPage(watchlist);
+            await Navigation.PushAsync(watchlistPage);
         }
+
     }
 }
