@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             x:Class="ZehraProje.RegisterPage"
+             Title="Kayıt Ol">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Entry x:Name="UsernameEntry"
+                   Placeholder="Kullanıcı Adı"
+                   FontSize="18" />
+
+            <Entry x:Name="EmailEntry"
+                   Placeholder="E-posta"
+                   Keyboard="Email"
+                   FontSize="18" />
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Şifre"
+                   IsPassword="True"
+                   FontSize="18" />
+
+            <Entry x:Name="ConfirmPasswordEntry"
+                   Placeholder="Şifreyi Onayla"
+                   IsPassword="True"
+                   FontSize="18" />
+
+            <Label Text="Doğum Tarihi"
+                   FontSize="18"
+                   FontAttributes="Bold" />
+            <DatePicker x:Name="BirthDatePicker"
+                        Format="dd/MM/yyyy"
+                        MaximumDate="{x:Static system:DateTime.Today}" />
+
+            <Button Text="Kayıt Ol"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    FontSize="18"
+                    Clicked="OnRegisterClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
